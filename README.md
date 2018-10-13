@@ -22,8 +22,8 @@ The car transmits its location, along with its sensor fusion data, which estimat
 
 
 
-## Performance
-###The performance of the car can reach following requirements:
+## Performance                           
+The performance of the car can reach following requirements:                   
 1. The car is able to drive at least 4.32 miles without incident.                             
 2. The car drives according to the speed limit.                      
 3. The speed of the car is lower than 50 MPH.
@@ -49,8 +49,5 @@ In this part, based on the telemetry and sensor fusion data, the decision of how
 
 2. Trajectory (Line 360 to Line 456)                                           
 In this part, based on the speed and lane output from the behavior, car coordinates and past path points the trajectory will be calculated and it works as follows:                   
-Get the last two points from the previous trajectory. If it is null, calculate it by using the current car coordinates.(Line 368 to Line 391) With the next three coordinates from 30m, 60m and 90m(Line 392 to Line 402), after being transformed to the local car coordinates(Line 404 to Line 412), the coordinates is used to initialize the Spline calculation.(Line 413 to Line 415)       
-
-
-
+Get the last two points from the previous trajectory. If it is null, calculate it by using the current car coordinates.(Line 368 to Line 391) With the next three coordinates from 30m, 60m and 90m(Line 392 to Line 402), after being transformed to the local car coordinates(Line 404 to Line 412), the coordinates is used to initialize the Spline calculation.(Line 413 to Line 415)                           
 In order to ensure the continuity on the trajectory, the path points from the previous path are added to the spline adjustment.(Line 421 to Line 426)  The rest of the points are calculated by evaluating the spline and transforming the output coordinates from 30m ahead to local coordinates.    
