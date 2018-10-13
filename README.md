@@ -31,6 +31,7 @@ The car transmits its location, along with its sensor fusion data, which estimat
 5. Car does not have collisions.
 6. The car stays in its lane, except for the time between changing lanes.
 7. The car is able to change lanes
+![Image text](https://github.com/Yunying-Chen/CarND-Path-Planning-Project/blob/master/img/sim_img.png)    
 
 
 
@@ -46,7 +47,7 @@ In this part, based on the telemetry and sensor fusion data, the decision of how
 
 
 
-2. Trajectory (Line 360 to Line 456)
+2. Trajectory (Line 360 to Line 456)                                           
 In this part, based on the speed and lane output from the behavior, car coordinates and past path points the trajectory will be calculated and it works as follows:                   
 Get the last two points from the previous trajectory. If it is null, calculate it by using the current car coordinates.(Line 368 to Line 391) With the next three coordinates from 30m, 60m and 90m(Line 392 to Line 402), after being transformed to the local car coordinates(Line 404 to Line 412), the coordinates is used to initialize the Spline calculation.(Line 413 to Line 415)       
 
